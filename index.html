@@ -19,8 +19,8 @@
                 <span class="products-number" style="text-decoration: underline;">2 товара</span><!--
              --><span style="text-decoration: underline;">&#8194;на сумму&#8194;</span><!--
              --><span class="products-cost" style="text-decoration: underline;">217 руб.</span>
-                <span>&#8594;</span>
-                <span>к оплате</span>
+                <span style="color: rgba(0, 0, 0, 0.2)">&#8594;</span>
+                <span style="text-decoration: underline;color: rgba(0, 0, 0, 0.2)">к оплате</span>
             </div>
             <div class="authorization-block">
                 <div class="icon authorization-icon"></div>
@@ -65,9 +65,11 @@
                 <li><a href="#">прайс в excel</a></li>
                 <li><a href="#">библиотека</a></li>
                 <li><a href="#">контакты</a></li>
+                <li></li><!-- fix for 'text-align: justify' -->
             </ul>
         </nav>
-        <label><input type="search" placeholder="&#128269; Поиск"/></label>
+        <label class="search-block"><input type="search" placeholder="&#128269;&#8194;&#8194;Поиск"/></label>
+        <div class="clearfix"></div>
     </div>
 </header>
 

@@ -34,3 +34,55 @@ body {
     text-decoration: underline;
 }
 .header-top .log-in {text-decoration: underline dotted;}
+.nav-block {
+    background: -webkit-linear-gradient(to bottom, #0060b7, #004d8f);
+    background: -o-linear-gradient(to bottom, #0060b7, #004d8f);
+    background: -moz-linear-gradient(to bottom, #0060b7, #004d8f);
+    background: linear-gradient(to bottom, #0060b7, #004d8f);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+.nav-block ul {
+    display: inline-block;
+    width: 75%;
+    margin-left: 3%;
+    text-align: justify;
+    text-align-last: justify;
+    float: left;
+    margin-top: 25px;
+}
+.nav-block ul li {
+    display: inline-block;
+    cursor: pointer;
+}
+.nav-block ul li:last-child {
+    width: 100%;
+    height: 0;
+    visibility: hidden;
+}
+.nav-block ul li a {
+    color: #ffffff;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 600;
+    text-shadow: 1px 1px #000;
+}
+.nav-block .search-block {
+    display: inline-block;
+    width: 20%;
+    float: right;
+    margin: 20px 0;
+    text-align: center;
+}
+.nav-block .search-block input {
+    padding: 5px 0 5px 10px;
+}
+.nav-block .search-block input::-webkit-input-placeholder {color: rgba(0, 0, 0, 0.5); font-size: 1.1em;}
+.nav-block .search-block input::-moz-placeholder {color: rgba(0, 0, 0, 0.5); font-size: 1.1em;}
+.nav-block .search-block input:-moz-placeholder {color: rgba(0, 0, 0, 0.5); font-size: 1.1em;}
+.nav-block .search-block input:-ms-input-placeholder {color: rgba(0, 0, 0, 0.5); font-size: 1.1em;}
+.nav-block .search-block input:focus::-webkit-input-placeholder {color: transparent}
+.nav-block .search-block input:focus::-moz-placeholder {color: transparent}
+.nav-block .search-block input:focus:-moz-placeholder {color: transparent}
+.nav-block .search-block input:focus:-ms-input-placeholder {color: transparent}
