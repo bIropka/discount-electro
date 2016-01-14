@@ -9,8 +9,28 @@ body {
 .clearfix {
     clear: both;
 }
+.icon {display: inline-block; border: 1px solid black;}
 .content-block {
     width: 980px;
     margin: 0 auto;
 }
-
+.header-top, .footer-top {
+    width: 100%;
+    background-color: #f4b031;
+    padding: 10px 0;
+}
+.header-top .basket-block {float: left;}
+.header-top .authorization-block {float: right;}
+.header-top .basket-icon, .header-top .authorization-icon {
+    width: 1.2em;
+    padding-top: 1.2em;
+    vertical-align: middle;
+}
+.header-top span {
+    vertical-align: middle;
+}
+.header-top .log-in, .header-top .sign-up {
+    cursor: pointer;
+    text-decoration: underline;
+}
+.header-top .log-in {text-decoration: underline dotted;}
