@@ -1,7 +1,12 @@
+@font-face {font-family: "Proxima Nova Bold";src: url("../fonts/ProximaNovaBold.otf");}
+@font-face {font-family: "Proxima Nova Regular";src: url("../fonts/ProximaNovaRegular.otf");}
+@font-face {font-family: "Proxima Nova Light";src: url("../fonts/ProximaNovaLight.otf");}
+@font-face {font-family: "Arial";src: url("../fonts/arial.ttf");}
 * {
     margin: 0;
     padding: 0;
     font-size: 14px;
+    font-family: Arial, sans-serif;
 }
 body {
     width: 100%;
@@ -9,21 +14,27 @@ body {
 .clearfix {
     clear: both;
 }
-.icon {display: inline-block; border: 1px solid black;}
+.icon {display: inline-block;}
+.basket-icon {background: transparent url("../images/sprite.png") no-repeat 0 center; background-size: cover;}
+.authorization-icon {background: transparent url("../images/sprite.png") no-repeat 5% center; background-size: cover;}
 .content-block {
-    width: 980px;
+    width: 100%;
+    max-width: 980px;
     margin: 0 auto;
 }
 .header-top, .footer-top {
     width: 100%;
     background-color: #f4b031;
     padding: 10px 0;
+    margin-bottom: 1.5%;
 }
 .header-top .basket-block {float: left;}
+.header-top .basket-block .text-1 {text-decoration: underline;}
+.header-top .basket-block .to-pay, .delimiter {color: rgba(0, 0, 0, 0.2);}
 .header-top .authorization-block {float: right;}
 .header-top .basket-icon, .header-top .authorization-icon {
-    width: 1.2em;
-    padding-top: 1.2em;
+    width: 2em;
+    padding-top: 2em;
     vertical-align: middle;
 }
 .header-top span {
@@ -34,6 +45,108 @@ body {
     text-decoration: underline;
 }
 .header-top .log-in {text-decoration: underline dotted;}
+header .content-block {text-align: center;}
+.logo-block {
+    float: left;
+    text-align: left;
+    width: 30%;
+}
+.logo-block .logo-icon {
+    width: 13%;
+    padding-top: 16%;
+    background: transparent url('../images/logo.png');
+    background-size: cover;
+    float: left;
+}
+.logo-block .logo-1, .logo-block .logo-2 {
+    display: inline-block;
+    width: 83%;
+    vertical-align: top;
+    float: right;
+    text-transform: uppercase;
+}
+.logo-block .logo-1 .text-1 {
+    font-family: "Proxima Nova Bold", sans-serif;
+    font-size: 1.8em;
+    color: #0258a0;
+}
+.logo-block .logo-1 .text-2 {
+    font-family: "Proxima Nova Light", sans-serif;
+    font-size: 1.8em;
+}
+.logo-block .logo-2 {
+    font-family: "Proxima Nova Bold", sans-serif;
+    font-size: 0.8em;
+    color: #999999;
+}
+.contacts-block {
+    display: inline-block;
+    width: 40%;
+}
+.contacts-block .icon {
+    width: 1.8em;
+    padding-top: 1.8em;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    float: left;
+}
+.contacts-block .address-block, .contacts-block .email-block {width: 100%;text-align: left;}
+.address-block .address-icon {
+    background: #f1af40 url('../images/sprite.png') no-repeat 71.4% center;
+    background-size: cover;
+    vertical-align: middle;
+}
+.email-block .email-icon {
+    background: #f1af40 url('../images/sprite.png') no-repeat 58.3% center;
+    background-size: cover;
+    vertical-align: middle;
+}
+.contacts-block .our-address, .contacts-block .our-email {
+    display: inline-block;
+    width: 90%;
+    float: right;
+}
+.contacts-block .our-email a {
+    color: #0063b7;
+    line-height: 1.8em;
+    -moz-text-decoration-style: dotted;
+    -webkit-text-decoration-style: dotted;
+    text-decoration-style: dotted;
+}
+.phone-block {
+    float: right;
+    text-align: left;
+    width: 22%;
+}
+.phone-block .phone-icon {
+    width: 2.3em;
+    padding-top: 2.3em;
+    background: #f1af40 url('../images/sprite.png') no-repeat 65% center;
+    background-size: cover;
+    vertical-align: middle;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    float: left;
+    margin-left: 5%;
+}
+.phone-block .our-phone-number {
+    float: right;
+    width: 70%;
+}
+.our-phone-number .text-1, .our-phone-number .text-2 {
+    display: inline-block;
+    font-size: 1.4em;
+}
+.our-phone-number .text-1 {font-family: "Proxima Nova Regular", sans-serif;}
+.our-phone-number .text-2 {font-family: "Proxima Nova Bold", sans-serif;}
+.phone-block>.text-1 {
+    font-size: 0.9em;
+    color: #999999;
+    width: 70%;
+    float: right;
+}
 .nav-block {
     background: -webkit-linear-gradient(to bottom, #0060b7, #004d8f);
     background: -o-linear-gradient(to bottom, #0060b7, #004d8f);
@@ -42,6 +155,7 @@ body {
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
+    margin: 1.5% auto 1%;
 }
 .nav-block ul {
     display: inline-block;
@@ -86,3 +200,34 @@ body {
 .nav-block .search-block input:focus::-moz-placeholder {color: transparent}
 .nav-block .search-block input:focus:-moz-placeholder {color: transparent}
 .nav-block .search-block input:focus:-ms-input-placeholder {color: transparent}
+
+.breadcrumbs li {
+    display: inline-block;
+}
+.breadcrumbs li a {color: #0063b7;}
+.breadcrumbs li:last-child .delimiter {
+    display: none;
+}
+.product-name {
+    font-family: "Proxima Nova Bold", sans-serif;
+    font-size: 2.15em;
+    line-height: 2em;
+}
+.is-available {
+    font-size: 0.9em;
+    color: #61b516;
+}
+.articul-title {
+    font-size: 0.9em;
+    color: #808080;
+    font-weight: 600;
+    margin-left: 30px;
+}
+.articul-value {
+    font-size: 0.9em;
+    color: #808080;
+}
+.photo-block {
+    width: 50%;
+    margin-top: 1%;
+}
