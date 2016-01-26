@@ -94,12 +94,12 @@ header .content-block {text-align: center;}
 }
 .contacts-block .address-block, .contacts-block .email-block {width: 100%;text-align: left;}
 .address-block .address-icon {
-    background: #f1af40 url('../images/sprite.png') no-repeat 71.4% center;
+    background: #f1af40 url('../images/sprite.png') no-repeat 62.3% center;
     background-size: cover;
     vertical-align: middle;
 }
 .email-block .email-icon {
-    background: #f1af40 url('../images/sprite.png') no-repeat 58.3% center;
+    background: #f1af40 url('../images/sprite.png') no-repeat 50.8% center;
     background-size: cover;
     vertical-align: middle;
 }
@@ -123,7 +123,7 @@ header .content-block {text-align: center;}
 .phone-block .phone-icon {
     width: 2.3em;
     padding-top: 2.3em;
-    background: #f1af40 url('../images/sprite.png') no-repeat 65% center;
+    background: #f1af40 url('../images/sprite.png') no-repeat 56.6% center;
     background-size: cover;
     vertical-align: middle;
     -webkit-border-radius: 100%;
@@ -138,10 +138,11 @@ header .content-block {text-align: center;}
 }
 .our-phone-number .text-1, .our-phone-number .text-2 {
     display: inline-block;
-    font-size: 1.4em;
+    font-size: 1.15em;
+    font-family: "Proxima Nova Regular", sans-serif;
 }
-.our-phone-number .text-1 {font-family: "Proxima Nova Regular", sans-serif;}
-.our-phone-number .text-2 {font-family: "Proxima Nova Bold", sans-serif;}
+.our-phone-number .text-1 {color:#0259a2;vertical-align: top;}
+.our-phone-number .text-2 {font-size: 1.4em;}
 .phone-block>.text-1 {
     font-size: 0.9em;
     color: #999999;
@@ -192,6 +193,11 @@ header .content-block {text-align: center;}
 }
 .nav-block .search-block input {
     padding: 5px 0 5px 10px;
+    border: none;
+}
+.unchosen {
+    background: white url('../images/search-icon.png') no-repeat;
+    background-size: contain;
 }
 .nav-block .search-block input::-webkit-input-placeholder {color: rgba(0, 0, 0, 0.5); font-size: 1.1em;}
 .nav-block .search-block input::-moz-placeholder {color: rgba(0, 0, 0, 0.5); font-size: 1.1em;}
@@ -228,29 +234,218 @@ header .content-block {text-align: center;}
     font-size: 0.9em;
     color: #808080;
 }
-.photo-block {
+.photo-block, .to-buy-column {
     width: 50%;
     margin-top: 1%;
+    float: left;
 }
-#photo-main {
+.photo-main {list-style: none;outline: 1px solid #aaaaaa;}
+.photo-main li{
     width: 100%;
-    padding-top: 75%;
-    outline: 1px solid #aaaaaa;
+    display: none;
+}
+.photo-main li img {
+    width: 75%;
+    margin: 0 12.5%;
 }
 .big-photo-1 {background: transparent url('../images/product-photo-1.jpg') no-repeat center; background-size: contain;}
 .big-photo-2 {background: transparent url('../images/product-photo-2.jpg') no-repeat center; background-size: contain;}
 .big-photo-3 {background: transparent url('../images/product-photo-3.jpg') no-repeat center; background-size: contain;}
 .big-photo-4 {background: transparent url('../images/product-photo-4.jpg') no-repeat center; background-size: contain;}
-.photo-block li {
+.photo-list {
+    text-align: justify;
+    text-align-last: justify;
+    list-style: none;
+}
+.photo-list li {
     display: inline-block;
     width: 23%;
-    margin: 3% 1%;
+    margin: 3% 0;
     cursor: pointer;
-    outline: 1px solid transparent;
+    outline: 1px solid #aaaaaa;
 }
-.photo-block li:hover {
+.photo-list li:last-child {
+    width: 100%;
+    height: 0;
+    visibility: hidden;
+}
+.photo-list li:hover {
     outline: 1px solid red;
 }
-.photo-block li img {
-    max-width: 100%;
+.photo-list li img {
+    width: 100%;
+}
+.to-buy-column {
+    width: 48%;
+    float: right;
+}
+.product-parameters {
+    width: 100%;
+    border-collapse: collapse;
+}
+.product-parameters caption {
+    font-family: "Proxima Nova Bold", sans-serif;
+    font-size: 1.45em;
+    text-transform: uppercase;
+    padding: 0.5em 0;
+    text-align: left;
+}
+.product-parameters td {
+    background-color: #eaeaea;
+    padding: 4% 5%;
+}
+.product-parameters td:first-child {
+    width: 40%;
+    font-weight: 600;
+}
+.product-parameters tr:nth-child(2n) td {
+    background-color: white;
+}
+.to-buy-block {
+    margin-top: 4%;
+    background: #f1af40;
+}
+.to-buy-block .left-column {
+    float: left;
+    width: 50%;
+}
+.to-buy-block .old-price {
+    display: inline-block;
+    font-family: "Proxima Nova Regular", sans-serif;
+    font-size: 1.3em;
+    margin: 3% 0 1% 0;
+    padding-left: 6%;
+    background: url('../images/sprite.png') 107% center no-repeat;
+    background-size: cover;
+}
+.to-buy-block .new-price {
+    font-family: "Proxima Nova Bold", sans-serif;
+    font-size: 1.6em;
+    margin: 1% 0 1% 6%;
+}
+.to-buy-block .amount {
+    margin: 1% 0 1% 6%;
+    color: #8c8c8c;
+}
+.to-buy-block .discount {
+    margin: 1% 0 0 6%;
+    color: #8c8c8c;
+}
+.to-buy-block .right-column {
+    float: right;
+    width: 50%;
+}
+.to-buy-block button {
+    width: 85%;
+    font-family: "Proxima Nova Bold", sans-serif;
+    background: -webkit-linear-gradient(to bottom, #0060b7, #004d8f);
+    background: -o-linear-gradient(to bottom, #0060b7, #004d8f);
+    background: -moz-linear-gradient(to bottom, #0060b7, #004d8f);
+    background: linear-gradient(to bottom, #0060b7, #004d8f);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border: none;
+    padding: 5% 0;
+    margin: 3.5% 0 1.5% 10%;
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.to-buy-block .fast-purchase {
+    background: #c1c1c1;
+    color: black;
+    margin: 1.5% 0 3.5% 10%;
+}
+.to-buy-block .add-to-basket:hover{
+    background: -webkit-linear-gradient(to top, #0060b7, #004d8f);
+    background: -o-linear-gradient(to top, #0060b7, #004d8f);
+    background: -moz-linear-gradient(to top, #0060b7, #004d8f);
+    background: linear-gradient(to top, #0060b7, #004d8f);
+}
+.to-buy-block .fast-purchase:hover {
+    background: #bbbbbb;
+}
+.about-us {
+    width: 100%;
+    list-style: none;
+    margin-bottom: 3%;
+}
+.about-us li {
+    display: inline-block;
+    width: 25%;
+}
+.about-us .icon {
+    width: 3em;
+    padding-top: 3em;
+    border: 0.5em solid #f1af40;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    background: #f1af40 url('../images/sprite.png') no-repeat 74% center;
+    background-size: cover;
+    float: left;
+}
+.about-us li:nth-child(2) .icon {background: #f1af40 url('../images/sprite.png') no-repeat 79.8% center;background-size: cover;}
+.about-us li:nth-child(3) .icon {background: #f1af40 url('../images/sprite.png') no-repeat 85.9% center;background-size: cover;}
+.about-us li:nth-child(4) .icon {background: #f1af40 url('../images/sprite.png') no-repeat 62.3% center;background-size: cover;}
+.about-us li span {
+    display: inline-block;
+    width: 70%;
+    font-family: "Proxima Nova Bold", sans-serif;
+    text-transform: uppercase;
+    float: right;
+    margin-top: 5%;
+}
+.sub-title {
+    font-family: "Proxima Nova Bold", sans-serif;
+    font-size: 1.45em;
+    text-transform: uppercase;
+    margin-bottom: 2%;
+}
+.product-description {margin-bottom: 4%;}
+.product-description p {
+    line-height: 1.4em;
+    margin-top: 1em;
+    padding-right: 1.5em;
+}
+.left-column {float: left; width: 65%;}
+.right-column {float: right; width: 35%;}
+.reviews {width: 95%;list-style: none;}
+.reviews li {margin: 3% 0 1.5%;}
+.reviews .review-value {
+    float: left;
+    border: 0.1em solid #f1af40;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    font-size: 1.5em;
+    color: #f1af40;
+    font-weight: 600;
+    padding: 0.3em;
+}
+.reviews .review-body {
+    float: right;
+    width: 86%;
+}
+.reviews .sub-title {
+    font-size: 1em;
+    text-transform: inherit;
+    font-family: Arial, sans-serif;
+    font-weight: 600;
+}
+.reviews p {
+    margin: 0.5em 0 0;
+    padding-right: 1.5em;
+}
+.reviews .reviewer {
+    list-style: none;
+}
+.reviews .reviewer li {
+    display: inline-block;
+    color: #8c8c8c;
+    margin-right: 1em;
+}
+.payment-delivery-block {
+    border: 2px solid #f1af40;
 }
