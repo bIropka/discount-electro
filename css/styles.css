@@ -29,7 +29,7 @@ body {
     margin-bottom: 1.5%;
 }
 .header-top .basket-block {float: left;}
-.header-top .basket-block .text-1 {text-decoration: underline;}
+.header-top .basket-block .text-1 {text-decoration: underline;font-weight: 600;}
 .header-top .basket-block .to-pay, .delimiter {color: rgba(0, 0, 0, 0.2);}
 .header-top .authorization-block {float: right;}
 .header-top .basket-icon, .header-top .authorization-icon {
@@ -43,6 +43,7 @@ body {
 .header-top .log-in, .header-top .sign-up {
     cursor: pointer;
     text-decoration: underline;
+    font-weight: 600;
 }
 .header-top .log-in {text-decoration: underline dotted;}
 header .content-block {text-align: center;}
@@ -108,7 +109,7 @@ header .content-block {text-align: center;}
     float: right;
 }
 .contacts-block .our-email a {
-    color: #0063b7;
+    color: #448dca;
     line-height: 1.8em;
     -moz-text-decoration-style: dotted;
     -webkit-text-decoration-style: dotted;
@@ -204,7 +205,7 @@ header .content-block {text-align: center;}
 .breadcrumbs li {
     display: inline-block;
 }
-.breadcrumbs li a {color: #0063b7;}
+.breadcrumbs li a {color: #448dca;}
 .breadcrumbs li:last-child .delimiter {
     display: none;
 }
@@ -230,4 +231,26 @@ header .content-block {text-align: center;}
 .photo-block {
     width: 50%;
     margin-top: 1%;
+}
+#photo-main {
+    width: 100%;
+    padding-top: 75%;
+    outline: 1px solid #aaaaaa;
+}
+.big-photo-1 {background: transparent url('../images/product-photo-1.jpg') no-repeat center; background-size: contain;}
+.big-photo-2 {background: transparent url('../images/product-photo-2.jpg') no-repeat center; background-size: contain;}
+.big-photo-3 {background: transparent url('../images/product-photo-3.jpg') no-repeat center; background-size: contain;}
+.big-photo-4 {background: transparent url('../images/product-photo-4.jpg') no-repeat center; background-size: contain;}
+.photo-block li {
+    display: inline-block;
+    width: 23%;
+    margin: 3% 1%;
+    cursor: pointer;
+    outline: 1px solid transparent;
+}
+.photo-block li:hover {
+    outline: 1px solid red;
+}
+.photo-block li img {
+    max-width: 100%;
 }
