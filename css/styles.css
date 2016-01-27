@@ -260,9 +260,11 @@ header .content-block {text-align: center;}
 .photo-list li {
     display: inline-block;
     width: 23%;
+    height: 7em;
     margin: 3% 0;
     cursor: pointer;
     outline: 1px solid #aaaaaa;
+    overflow: hidden;
 }
 .photo-list li:last-child {
     width: 100%;
@@ -292,7 +294,7 @@ header .content-block {text-align: center;}
 }
 .product-parameters td {
     background-color: #eaeaea;
-    padding: 4% 5%;
+    padding: 3.7% 5%;
 }
 .product-parameters td:first-child {
     width: 40%;
@@ -398,35 +400,42 @@ header .content-block {text-align: center;}
     margin-top: 5%;
 }
 .sub-title {
+    display: inline-block;
+    width: 100%;
     font-family: "Proxima Nova Bold", sans-serif;
     font-size: 1.45em;
     text-transform: uppercase;
     margin-bottom: 2%;
 }
-.product-description {margin-bottom: 4%;}
+.product-description {
+    margin-bottom: 4%;
+    width: 90%;
+}
 .product-description p {
     line-height: 1.4em;
-    margin-top: 1em;
-    padding-right: 1.5em;
 }
 .left-column {float: left; width: 65%;}
 .right-column {float: right; width: 35%;}
-.reviews {width: 95%;list-style: none;}
-.reviews li {margin: 3% 0 1.5%;}
+.reviews {
+    width: 95%;
+    list-style: none;
+    margin-bottom: 3%;
+}
+.reviews li {margin: 1.5% 0;}
 .reviews .review-value {
     float: left;
     border: 0.1em solid #f1af40;
     -webkit-border-radius: 100%;
     -moz-border-radius: 100%;
     border-radius: 100%;
-    font-size: 1.5em;
+    font-size: 1.2em;
     color: #f1af40;
     font-weight: 600;
-    padding: 0.3em;
+    padding: 0.5em;
 }
 .reviews .review-body {
     float: right;
-    width: 86%;
+    width: 90%;
 }
 .reviews .sub-title {
     font-size: 1em;
@@ -437,6 +446,7 @@ header .content-block {text-align: center;}
 .reviews p {
     margin: 0.5em 0 0;
     padding-right: 1.5em;
+    line-height: 1.4em;
 }
 .reviews .reviewer {
     list-style: none;
@@ -444,8 +454,82 @@ header .content-block {text-align: center;}
 .reviews .reviewer li {
     display: inline-block;
     color: #8c8c8c;
-    margin-right: 1em;
+    margin-right: 0.3em;
 }
 .payment-delivery-block {
     border: 2px solid #f1af40;
+}
+
+
+
+.related-products-block {
+    width:100%;
+    margin-bottom: 5%;
+}
+.related-products-block ul {
+    width: 100%;
+    list-style: none;
+}
+.related-products-block ul li {
+    display: inline-block;
+    width: 23.5%;
+    margin-right: 2%;
+    text-align: center;
+    vertical-align: top;
+}
+.related-products-block ul li:last-child {margin-right: 0;}
+.related-products-block img {
+    max-width: 100%;
+    outline: 1px solid #aaaaaa;
+    margin-bottom: 2%;
+}
+.related-product-name, .related-product-cost {
+    display: inline-block;
+    width: 100%;
+    font-family: "Proxima Nova Regular", sans-serif;
+    font-size: 1.3em;
+    color: black;
+    text-decoration: none;
+}
+.related-product-name:hover, .related-product-name:hover .related-product-cost{
+    text-decoration: underline;
+}
+.related-product-cost {
+    font-family: "Proxima Nova Bold", sans-serif;
+    font-size: 1em;
+}
+.footer-top .social-block {width:50%;float: left;}
+.footer-top .print-block {width:50%;float: right;text-align: right}
+.footer-top .social-list {
+    display: inline-block;
+    list-style: none;
+    margin-left: 2em;
+}
+.footer-top span {line-height: 2em;vertical-align: top;}
+.footer-top .social-list li {
+    display: inline-block;
+    margin-right: 1em;
+    vertical-align: top;
+}
+.footer-top .social-list li .icon {
+    width: 2em;
+    padding-top: 2em;
+}
+.footer-top .social-list li .icon:hover, .print-block .print-icon:hover {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+}
+.vk-icon {background: url('../images/sprite.png') 38.5% center;background-size: cover;}
+.fb-icon {background: url('../images/sprite.png') 32.5% center;background-size: cover;}
+.tw-icon {background: url('../images/sprite.png') 45% center;background-size: cover;}
+.print-block .print-icon {
+    width: 2em;
+    padding-top: 2em;
+    background: url('../images/sprite.png') 69% center;
+    background-size: cover;
+    cursor: pointer;
+    margin-right: 2em;
 }
