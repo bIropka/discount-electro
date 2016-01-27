@@ -611,27 +611,116 @@ header .content-block {text-align: center;}
 .filters {
     width:20%;
     float: left;
-    outline: 1px solid black;
+    background: #f6f6f6;
+    padding-left: 1.2em;
+    padding-bottom: 1.5em;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
+.filters .sub-title {
+    font-size: 1.15em;
+    margin-top: 1em;
+}
+.filters li {
+    display: inline-block;
+    padding: 0.5em;
+    border: 1px solid #dadada;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    margin-bottom: 0.3em;
+    background: transparent;
+    cursor: pointer;
+    color:#2c2c2c;
+}
+.filters li:hover {border: 1px solid #f1af40;}
+.filters .active {border: 1px solid #f1af40;background: #f1af40;color: black}
 .catalog-2 {
+    display: table;
     width: 75%;
     float: right;
-    list-style: none;
     margin-bottom: 2%;
-    outline: 1px solid black;
+    border-collapse: collapse;
 }
-.catalog-2 li {
-    display: inline-block;
+.catalog-2-row {display: table-row;}
+.catalog-2-row>li {
+    display: table-cell;
     width: 32%;
-    margin-right: 2%;
-    margin-bottom: 2em;
-    outline: 1px solid #dadada;
+    height: 28em;
+    position: relative;
     vertical-align: top;
-    text-align: center;
 }
-.catalog-2 li:nth-child(3n){margin-right: 0;}
+.catalog-2 .product-card {
+    position: absolute;
+    width: 95%;
+    top: 0;
+    left: 0;
+    outline: 1px solid #dadada;
+    background: white;
+}
+.with-shadow {
+    -webkit-box-shadow: 5px 5px 8px lightgray, -5px 0 8px lightgray;
+    -moz-box-shadow:  5px 5px 8px lightgray, -5px 0 8px lightgray;
+    box-shadow:  5px 5px 8px lightgray, -5px 0 8px lightgray;
+}
+.catalog-2>li:nth-child(2) .product-card {top: 0;left:2.5%;}
+.catalog-2>li:nth-child(3) .product-card {top: 0;right:0;}
+.catalog-2 .product-name {
+    display: inline-block;
+    height: 2em;
+    margin: 1em 0 0 15px;
+    font-family: Arial, sans-serif;
+    font-size: 1em;
+    color: #448dca;
+    text-decoration: none;
+}
+.catalog-2 .product-name:hover {text-decoration: underline;}
+.catalog-2 .articul-title {margin-left: 15px;}
 .catalog-2 li img {
-    max-width: 100%;
+    width: 80%;
+    margin: 1em 10%;
+}
+.catalog-2 .parameters {
+    list-style: none;
+    margin-left: 15px;
+    display: none;
+}
+.catalog-2 .parameters li {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 0.6em;
+}
+.catalog-2 .param-name {color: #2c2c2c;font-weight: 600;}
+.catalog-2 .param-value {color: #2c2c2c;margin-left: 0.5em;}
+.catalog-2 .product-cost {
+    font-family: "Proxima Nova Bold", sans-serif;
+    font-size: 1.7em;
+    margin-left: 15px;
+}
+.catalog-2 button {
+    width: 80%;
+    color: white;
+    background: -webkit-linear-gradient(to bottom, #0060b7, #004d8f);
+    background: -o-linear-gradient(to bottom, #0060b7, #004d8f);
+    background: -moz-linear-gradient(to bottom, #0060b7, #004d8f);
+    background: linear-gradient(to bottom, #0060b7, #004d8f);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border: none;
+    text-transform: uppercase;
+    font-family: "Proxima Nova Bold", sans-serif;
+    margin: 1em 0 1em 15px;
+    line-height: 2.5em;
+    cursor: pointer;
+}
+.catalog-2 button:hover {
+    background: -webkit-linear-gradient(to top, #0060b7, #004d8f);
+    background: -o-linear-gradient(to top, #0060b7, #004d8f);
+    background: -moz-linear-gradient(to top, #0060b7, #004d8f);
+    background: linear-gradient(to top, #0060b7, #004d8f);
 }
 /**************** end of catalog-2 ******************/
 .footer-top {margin: 0;}

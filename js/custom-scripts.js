@@ -47,4 +47,25 @@ $(document).ready(function () {
         }
     });
 
+    $('.filters li').click(function () {
+        if ($(this).hasClass('active')) {
+            $(this).removeClass('active');
+        } else {
+            $(this).addClass('active');
+        }
+    });
+
+    $('.product-card').hover(
+        function(){
+            $(this).css('z-index', '1');
+            $(this).find('.parameters').fadeIn();
+            $(this).addClass('with-shadow');
+        },
+        function() {
+            $(this).removeClass('with-shadow');
+            $(this).find('.parameters').fadeOut();
+            $(this).css('z-index', '0');
+        }
+    );
+
 });
