@@ -227,7 +227,8 @@ header .content-block {text-align: center;}
 .product-name {
     font-family: "Proxima Nova Bold", sans-serif;
     font-size: 2.15em;
-    line-height: 2em;
+    line-height: 1em;
+    margin: 1em 0;
 }
 .is-available {
     font-size: 0.9em;
@@ -242,6 +243,9 @@ header .content-block {text-align: center;}
 .articul-value {
     font-size: 0.9em;
     color: #808080;
+}
+.product-general {
+    position: relative;
 }
 .photo-block, .to-buy-column {
     width: 50%;
@@ -262,29 +266,27 @@ header .content-block {text-align: center;}
 .big-photo-3 {background: transparent url('../images/product-photo-3.jpg') no-repeat center; background-size: contain;}
 .big-photo-4 {background: transparent url('../images/product-photo-4.jpg') no-repeat center; background-size: contain;}
 .photo-list {
-    text-align: justify;
-    text-align-last: justify;
+    text-align: left;
     list-style: none;
 }
 .photo-list li {
     display: inline-block;
-    width: 23%;
+    width: 23.5%;
     height: 7em;
-    margin: 3% 0;
+    margin: 3% 2% 0 0;
     cursor: pointer;
     outline: 1px solid #aaaaaa;
     overflow: hidden;
 }
 .photo-list li:last-child {
-    width: 100%;
-    height: 0;
-    visibility: hidden;
+    margin-right: 0;
 }
 .photo-list li:hover {
     outline: 1px solid #f1af40;
 }
 .photo-list li img {
-    width: 100%;
+    width: 90%;
+    margin: 0 5%;
 }
 .to-buy-column {
     width: 48%;
@@ -303,7 +305,7 @@ header .content-block {text-align: center;}
 }
 .product-parameters td {
     background-color: #eaeaea;
-    padding: 3.7% 5%;
+    padding: 3.5% 5%;
 }
 .product-parameters td:first-child {
     width: 40%;
@@ -313,7 +315,8 @@ header .content-block {text-align: center;}
     background-color: white;
 }
 .to-buy-block {
-    margin-top: 4%;
+    position: absolute;
+    bottom: 2px;
     background: #f1af40;
 }
 .to-buy-block .left-column {
@@ -326,7 +329,7 @@ header .content-block {text-align: center;}
     font-size: 1.3em;
     margin: 3% 0 1% 0;
     padding-left: 6%;
-    background: url('../images/sprite.png') 107% center no-repeat;
+    background: url('../images/sprite.png') 108% center no-repeat;
     background-size: cover;
 }
 .to-buy-block .new-price {
@@ -380,7 +383,7 @@ header .content-block {text-align: center;}
 .about-us {
     width: 100%;
     list-style: none;
-    margin-bottom: 3%;
+    margin: 3% 0;
 }
 .about-us li {
     display: inline-block;
@@ -569,6 +572,68 @@ header .content-block {text-align: center;}
     font-family: "Proxima Nova Bold", sans-serif;
     font-size: 1em;
 }
+/******************** catalog-1 *********************/
+.page-name {
+    font-family: "Proxima Nova Bold", sans-serif;
+    font-size: 2.15em;
+    margin: 1em 0;
+}
+.catalog {
+    width: 100%;
+    list-style: none;
+    margin-bottom: 2%;
+}
+.catalog li {
+    display: inline-block;
+    width: 23.5%;
+    margin-right: 2%;
+    margin-bottom: 2em;
+    outline: 1px solid #dadada;
+    vertical-align: top;
+    text-align: center;
+}
+.catalog li:nth-child(4n){margin-right: 0;}
+.catalog li img {
+    max-width: 100%;
+}
+.catalog li a {
+    display: inline-block;
+    margin-top: 2em;
+    min-height: 3.5em;
+    width: auto;
+    color: #448dca;
+    text-decoration: none;
+}
+.catalog li a:hover {text-decoration: underline;}
+/**************** end of catalog-1 ******************/
+
+/******************** catalog-2 *********************/
+.filters {
+    width:20%;
+    float: left;
+    outline: 1px solid black;
+}
+.catalog-2 {
+    width: 75%;
+    float: right;
+    list-style: none;
+    margin-bottom: 2%;
+    outline: 1px solid black;
+}
+.catalog-2 li {
+    display: inline-block;
+    width: 32%;
+    margin-right: 2%;
+    margin-bottom: 2em;
+    outline: 1px solid #dadada;
+    vertical-align: top;
+    text-align: center;
+}
+.catalog-2 li:nth-child(3n){margin-right: 0;}
+.catalog-2 li img {
+    max-width: 100%;
+}
+/**************** end of catalog-2 ******************/
 .footer-top {margin: 0;}
 .footer-top .social-block {width:50%;float: left;}
 .footer-top .print-block {width:50%;float: right;text-align: right}
