@@ -16,6 +16,8 @@ body {
 }
 .icon {display: inline-block;}
 .basket-icon {background: transparent url("../images/sprite.png") no-repeat 0 center; background-size: cover;}
+.android-icon{background: transparent url("../images/mobile-sprite.png") no-repeat right center; background-size: cover;}
+.apple-icon{background: transparent url("../images/mobile-sprite.png") no-repeat left center; background-size: cover;}
 .authorization-icon {background: transparent url("../images/sprite.png") no-repeat 5% center; background-size: cover;}
 .content-block {
     width: 100%;
@@ -37,6 +39,13 @@ body {
     padding-top: 2em;
     vertical-align: middle;
 }
+.header-top .android-icon, .header-top .apple-icon {
+    width: 2.5em;
+    padding-top: 2.5em;
+    vertical-align: middle;
+}
+
+.header-top .android-icon {margin-right: 2em;}
 .header-top span {
     vertical-align: middle;
 }
@@ -272,7 +281,7 @@ header .content-block {text-align: center;}
     visibility: hidden;
 }
 .photo-list li:hover {
-    outline: 1px solid red;
+    outline: 1px solid #f1af40;
 }
 .photo-list li img {
     width: 100%;
@@ -287,7 +296,7 @@ header .content-block {text-align: center;}
 }
 .product-parameters caption {
     font-family: "Proxima Nova Bold", sans-serif;
-    font-size: 1.45em;
+    font-size: 1.6em;
     text-transform: uppercase;
     padding: 0.5em 0;
     text-align: left;
@@ -403,7 +412,7 @@ header .content-block {text-align: center;}
     display: inline-block;
     width: 100%;
     font-family: "Proxima Nova Bold", sans-serif;
-    font-size: 1.45em;
+    font-size: 1.6em;
     text-transform: uppercase;
     margin-bottom: 2%;
 }
@@ -423,6 +432,7 @@ header .content-block {text-align: center;}
 }
 .reviews li {margin: 1.5% 0;}
 .reviews .review-value {
+    display: inline-block;
     float: left;
     border: 0.1em solid #f1af40;
     -webkit-border-radius: 100%;
@@ -431,7 +441,9 @@ header .content-block {text-align: center;}
     font-size: 1.2em;
     color: #f1af40;
     font-weight: 600;
-    padding: 0.5em;
+    line-height: 2em;
+    width: 2em;
+    text-align: center;
 }
 .reviews .review-body {
     float: right;
@@ -442,6 +454,7 @@ header .content-block {text-align: center;}
     text-transform: inherit;
     font-family: Arial, sans-serif;
     font-weight: 600;
+    margin-bottom: 0;
 }
 .reviews p {
     margin: 0.5em 0 0;
@@ -457,11 +470,69 @@ header .content-block {text-align: center;}
     margin-right: 0.3em;
 }
 .payment-delivery-block {
-    border: 2px solid #f1af40;
+    border: 3px solid #f1af40;
+    width: 100%;
 }
-
-
-
+.payment-delivery-block .sub-title {
+    margin: 1em 0 0.7em 1.5em;
+}
+.payment-delivery-block ul{margin-left: 2em;}
+.payment-delivery-block li {
+    display: inline-block;
+    margin: 0 1em 1em 0;
+}
+.payment-delivery-block li a {
+    display: inline-block;
+    width: 2.3em;
+    padding-top: 2.3em;
+    background: url('../images/sprite.png') no-repeat 9.3% center;
+    background-size:cover;
+}
+.payment-delivery-block li:nth-child(2) a {background: url('../images/sprite.png') no-repeat 15% center;background-size:cover;}
+.payment-delivery-block li:nth-child(3) a {background: url('../images/sprite.png') no-repeat 21% center;background-size:cover;}
+.payment-delivery-block li:nth-child(4) a {background: url('../images/sprite.png') no-repeat 26.7% center;background-size:cover;}
+.payment-delivery-block>a{
+    display: inline-block;
+    width: 80%;
+    margin: 0.5em 0 1.5em 2.3em;
+    color: #448dca;
+}
+.payment-delivery-block>span, .payment-delivery-block>strong {
+    margin-left: 2.3em;
+    margin-bottom: 1.5em;
+}
+.video-review-block {
+    width: 100%;
+    margin: 2em 0;
+}
+.video-review-block iframe {
+    width: 100%;
+    height: 14em;
+}
+.offices-block {
+    width: 100%;
+    background: #eaeaea;
+}
+.offices-block .sub-title {
+    margin: 1.5em 0 0 1.5em;
+}
+.office-mark {
+    display: inline-block;
+    width: 85%;
+    cursor: pointer;
+    margin: 1.5em 0 0 2.5em;
+    color: #448dca;
+}
+.office-mark:last-child {margin-bottom: 2em;}
+.offices-block .office-address {
+    display: none;
+    color: black;
+}
+.underground-st:hover {text-decoration:underline;text-decoration-style: dotted;}
+.active .underground-st {text-decoration:underline;text-decoration-style: dotted;}
+.active .underground-st:hover {text-decoration:none;}
+.offices-block .office-address a {color: #8c8c8c;text-decoration: none;}
+.offices-block .office-address a:hover {color:#5D5D5D;}
 .related-products-block {
     width:100%;
     margin-bottom: 5%;
@@ -498,6 +569,7 @@ header .content-block {text-align: center;}
     font-family: "Proxima Nova Bold", sans-serif;
     font-size: 1em;
 }
+.footer-top {margin: 0;}
 .footer-top .social-block {width:50%;float: left;}
 .footer-top .print-block {width:50%;float: right;text-align: right}
 .footer-top .social-list {
@@ -515,7 +587,7 @@ header .content-block {text-align: center;}
     width: 2em;
     padding-top: 2em;
 }
-.footer-top .social-list li .icon:hover, .print-block .print-icon:hover {
+.footer-top .social-list li .icon:hover, .print-block .print-icon:hover, .payment-delivery-block li a:hover {
     -webkit-transform: scale(1.2);
     -moz-transform: scale(1.2);
     -ms-transform: scale(1.2);
@@ -533,3 +605,32 @@ header .content-block {text-align: center;}
     cursor: pointer;
     margin-right: 2em;
 }
+.footer-bottom {width: 100%;background: #eaeaea;}
+.footer-bottom a {color:#2c2c2c;text-decoration: none;}
+.footer-bottom a:hover {text-decoration: underline;}
+.footer-bottom .sub-title{width: auto;font-size: 1em;}
+.footer-bottom .catalog-menu {
+    display: inline-block;
+    width: 30%;
+    margin: 3em 0;
+    float: left;
+}
+.footer-bottom .catalog-menu li, .footer-bottom .footer-menu li, .footer-bottom .footer-contacts li {
+    display: block;
+    width: auto;
+    line-height: 1.5em;
+}
+.footer-bottom .footer-menu {
+    display: inline-block;
+    width: 17%;
+    margin: 3em;
+}
+.footer-bottom .footer-contacts {
+    display: inline-block;
+    width: auto;
+    float: right;
+    margin: 3em 0;
+}
+.footer-contacts li {margin-bottom: 0.7em;}
+.footer-contacts .sub-title {margin:0;}
+.footer-contacts .rights {font-size: 0.7em;}

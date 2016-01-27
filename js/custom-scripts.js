@@ -35,4 +35,16 @@ $(document).ready(function () {
         $(this).addClass('unchosen');
     });
 
+    $('.office-mark').click(function() {
+        if($(this).hasClass('active')){
+            $(this).find('.office-address').fadeOut();
+            $(this).removeClass('active');
+            $(this).find('underground-st').css('text-decoration-style', 'none');
+        } else {
+            $(this).find('.office-address').fadeIn();
+            $(this).addClass('active');
+            $(this).find('underground-st').css('text-decoration', 'underline');
+        }
+    });
+
 });
