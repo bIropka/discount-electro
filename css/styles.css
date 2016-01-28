@@ -167,37 +167,75 @@ header .content-block {text-align: center;}
     -moz-border-radius: 5px;
     border-radius: 5px;
     margin: 1.5% auto 1%;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
-.nav-block ul {
+nav>ul {
     display: inline-block;
     width: 75%;
     margin-left: 3%;
-    text-align: justify;
-    text-align-last: justify;
     float: left;
-    margin-top: 25px;
+    text-align: left;
 }
-.nav-block ul li {
+nav>ul>li {
     display: inline-block;
-    cursor: pointer;
+    height: 4em;
+    margin-right: 0.3em;
+    padding: 0 0.5em;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
 }
-.nav-block ul li:last-child {
-    width: 100%;
-    height: 0;
-    visibility: hidden;
+nav>ul>li:hover {
+    border-left: 1px solid #004d8f;
+    border-right: 1px solid #004d8f;
 }
-.nav-block ul li a {
+nav>ul>li>a {
+    display: inline-block;
+    margin-top: 1.5em;
     color: #ffffff;
     text-transform: uppercase;
     text-decoration: none;
     font-weight: 600;
     text-shadow: 1px 1px #000;
 }
+nav>ul>li>a:hover, .nav-block .sub-menu a:hover {
+    color: #f1af40;
+}
+nav .super-menu {position: relative;}
+.super-menu:hover .sub-menu {display: block;}
+nav .sub-menu {
+    display: none;
+    width: auto;
+    position: absolute;
+    top: 100%;
+    left: -10px;
+    list-style: none;
+    background: -webkit-linear-gradient(to top, #0060b7, #004d8f);
+    background: -o-linear-gradient(to top, #0060b7, #004d8f);
+    background: -moz-linear-gradient(to top, #0060b7, #004d8f);
+    background: linear-gradient(to top, #0060b7, #004d8f);
+    -webkit-border-radius: 0 0 5px 5px;
+    -moz-border-radius: 0 0 5px 5px;
+    border-radius: 0 0 5px 5px;
+    padding: 10px 0;
+    z-index: 1;
+}
+.nav-block .sub-menu a {
+    display: inline-block;
+    line-height: 1.5em;
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    width: auto;
+    white-space: nowrap;
+}
 .nav-block .search-block {
     display: inline-block;
     width: 20%;
     float: right;
-    margin: 20px 0;
+    margin: 1em 0;
     text-align: center;
 }
 .nav-block .search-block input {
@@ -216,7 +254,6 @@ header .content-block {text-align: center;}
 .nav-block .search-block input:focus::-moz-placeholder {color: transparent}
 .nav-block .search-block input:focus:-moz-placeholder {color: transparent}
 .nav-block .search-block input:focus:-ms-input-placeholder {color: transparent}
-
 .breadcrumbs li {
     display: inline-block;
 }
@@ -648,7 +685,7 @@ header .content-block {text-align: center;}
 .catalog-2-row>li {
     display: table-cell;
     width: 32%;
-    height: 28em;
+    height: 33em;
     position: relative;
     vertical-align: top;
 }
@@ -662,8 +699,8 @@ header .content-block {text-align: center;}
 }
 .with-shadow {
     -webkit-box-shadow: 5px 5px 8px lightgray, -5px 0 8px lightgray;
-    -moz-box-shadow:  5px 5px 8px lightgray, -5px 0 8px lightgray;
-    box-shadow:  5px 5px 8px lightgray, -5px 0 8px lightgray;
+    -moz-box-shadow: 5px 5px 8px lightgray, -5px 0 8px lightgray;
+    box-shadow: 5px 5px 8px lightgray, -5px 0 8px lightgray;
 }
 .catalog-2>li:nth-child(2) .product-card {top: 0;left:2.5%;}
 .catalog-2>li:nth-child(3) .product-card {top: 0;right:0;}
@@ -716,6 +753,7 @@ header .content-block {text-align: center;}
     line-height: 2.5em;
     cursor: pointer;
 }
+.catalog-2 .to-buy {margin-bottom: 0;}
 .catalog-2 button:hover {
     background: -webkit-linear-gradient(to top, #0060b7, #004d8f);
     background: -o-linear-gradient(to top, #0060b7, #004d8f);

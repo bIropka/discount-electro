@@ -43,7 +43,7 @@
         <div class="contacts-block">
             <div class="address-block">
                 <div class="icon address-icon"></div>
-                <span class="our-address">г. Санкт-Петербург, м. Международная, ул. Белы Куна 30а, БЦ Софийская Площадь</span>
+                <span class="our-address">г. Санкт-Петербург, м. Международная,<br> ул. Белы Куна 30а, БЦ Софийская Площадь</span>
                 <div class="clearfix"></div>
             </div>
             <div class="email-block">
@@ -63,12 +63,21 @@
         <nav>
             <ul>
                 <li><a href="#">о компании</a></li>
-                <li><a href="#">каталог</a></li>
+                <li class="super-menu">
+                    <a href="catalog.html">каталог</a>
+                    <ul class="sub-menu">
+                        <li><a href="#">Все для монтажа кабеля</a></li>
+                        <li><a href="#">Светотехническое оборудование</a></li>
+                        <li><a href="#">Светодиодное оборудование</a></li>
+                        <li><a href="#">Автоматы, розетки, выключатели, щитовое оборудование</a></li>
+                        <li><a href="#">Промышленное оборудование</a></li>
+                        <li><a href="#">Тепловое оборудование</a></li>
+                    </ul>
+                </li>
                 <li><a href="#">электромонтаж</a></li>
                 <li><a href="#">прайс в excel</a></li>
                 <li><a href="#">библиотека</a></li>
                 <li><a href="#">контакты</a></li>
-                <li></li><!-- fix for 'text-align: justify' -->
             </ul>
         </nav>
         <label class="search-block"><input class="unchosen" type="search" placeholder="&#8194;&#8194;&#8194;Поиск"/></label>
@@ -79,7 +88,8 @@
 <main>
     <div class="content-block">
         <ul class="breadcrumbs">
-            <li><a href="product-card.html">Главная</a><span class="delimiter">&#8194;&#8594;&#8194;</span></li>
+            <li><a href="index.html">Главная</a><span class="delimiter">&#8194;&#8594;&#8194;</span></li>
+            <li><a href="catalog.html">Каталог</a><span class="delimiter">&#8194;&#8594;&#8194;</span></li>
         </ul>
 
         <div class="page-name">Каталог</div>
@@ -87,39 +97,39 @@
             <div class="cost-filter">
                 <div class="sub-title">Сортировка</div>
                 <ul>
-                    <li class="active">По умолчанию</li>
-                    <li>По цене</li>
+                    <li class="active general">По умолчанию</li>
+                    <li class="general">По цене</li>
                 </ul>
             </div>
             <div class="power-filter">
                 <div class="sub-title">Мощность светодиодов</div>
                 <ul>
-                    <li>Любое/сбросить</li>
-                    <li>5Вт</li>
-                    <li>6Вт</li>
-                    <li>8Вт</li>
-                    <li>15Вт</li>
-                    <li>20Вт</li>
-                    <li class="active">30Вт</li>
-                    <li>80Вт</li>
+                    <li class="cancel">Любое/сбросить</li>
+                    <li class="choice">5Вт</li>
+                    <li class="choice">6Вт</li>
+                    <li class="choice">8Вт</li>
+                    <li class="choice">15Вт</li>
+                    <li class="choice">20Вт</li>
+                    <li class="active choice">30Вт</li>
+                    <li class="choice">80Вт</li>
                 </ul>
             </div>
             <div class="brand-filter">
                 <div class="sub-title">Производитель</div>
                 <ul>
-                    <li class="active">Любое/сбросить</li>
-                    <li>Feron</li>
-                    <li>JazzWay</li>
-                    <li>Световые Технологии</li>
-                    <li>ТВК</li>
+                    <li class="active cancel">Любое/сбросить</li>
+                    <li class="choice">Feron</li>
+                    <li class="choice">JazzWay</li>
+                    <li class="choice">Световые Технологии</li>
+                    <li class="choice">ТВК</li>
                 </ul>
             </div>
             <div class="defence-filter">
                 <div class="sub-title">Степень защиты</div>
                 <ul>
-                    <li class="active">Любое/сбросить</li>
-                    <li>IP54</li>
-                    <li>IP65</li>
+                    <li class="active cancel">Любое/сбросить</li>
+                    <li class="choice">IP54</li>
+                    <li class="choice">IP65</li>
                 </ul>
             </div>
         </div>
@@ -139,7 +149,8 @@
                             <li><span class="param-name">Цоколь:</span><span class="param-value">G5.3</span></li>
                         </ul>
                         <div class="product-cost">21,90 руб.</div>
-                        <button>в корзину</button>
+                        <button class="to-buy">купить в один клик</button>
+                        <button class="in-basket">в корзину</button>
                     </div>
                 </li>
                 <li>
@@ -156,7 +167,8 @@
                             <li><span class="param-name">Цоколь:</span><span class="param-value">G5.3</span></li>
                         </ul>
                         <div class="product-cost">21,90 руб.</div>
-                        <button>в корзину</button>
+                        <button class="to-buy">купить в один клик</button>
+                        <button class="in-basket">в корзину</button>
                     </div>
                 </li>
                 <li>
@@ -173,7 +185,8 @@
                             <li><span class="param-name">Цоколь:</span><span class="param-value">G5.3</span></li>
                         </ul>
                         <div class="product-cost">24,30 руб.</div>
-                        <button>в корзину</button>
+                        <button class="to-buy">купить в один клик</button>
+                        <button class="in-basket">в корзину</button>
                     </div>
                 </li>
             </ul>
@@ -192,7 +205,8 @@
                             <li><span class="param-name">Цоколь:</span><span class="param-value">G5.3</span></li>
                         </ul>
                         <div class="product-cost">21,90 руб.</div>
-                        <button>в корзину</button>
+                        <button class="to-buy">купить в один клик</button>
+                        <button class="in-basket">в корзину</button>
                     </div>
                 </li>
                 <li>
@@ -209,7 +223,8 @@
                             <li><span class="param-name">Цоколь:</span><span class="param-value">G5.3</span></li>
                         </ul>
                         <div class="product-cost">0,50 руб.</div>
-                        <button>в корзину</button>
+                        <button class="to-buy">купить в один клик</button>
+                        <button class="in-basket">в корзину</button>
                     </div>
                 </li>
                 <li>
@@ -226,7 +241,8 @@
                             <li><span class="param-name">Цоколь:</span><span class="param-value">G5.3</span></li>
                         </ul>
                         <div class="product-cost">1,91 руб.</div>
-                        <button>в корзину</button>
+                        <button class="to-buy">купить в один клик</button>
+                        <button class="in-basket">в корзину</button>
                     </div>
                 </li>
             </ul>
@@ -245,7 +261,8 @@
                             <li><span class="param-name">Цоколь:</span><span class="param-value">G5.3</span></li>
                         </ul>
                         <div class="product-cost">211,90 руб.</div>
-                        <button>в корзину</button>
+                        <button class="to-buy">купить в один клик</button>
+                        <button class="in-basket">в корзину</button>
                     </div>
                 </li>
                 <li>
@@ -262,7 +279,8 @@
                             <li><span class="param-name">Цоколь:</span><span class="param-value">G5.3</span></li>
                         </ul>
                         <div class="product-cost">25,90 руб.</div>
-                        <button>в корзину</button>
+                        <button class="to-buy">купить в один клик</button>
+                        <button class="in-basket">в корзину</button>
                     </div>
                 </li>
             </ul>

@@ -48,10 +48,23 @@ $(document).ready(function () {
     });
 
     $('.filters li').click(function () {
-        if ($(this).hasClass('active')) {
-            $(this).removeClass('active');
-        } else {
+        if ($(this).hasClass('general')) {
+            $(this).parent().children().removeClass('active');
             $(this).addClass('active');
+            return;
+        }
+        if ($(this).hasClass('cancel')) {
+            if (!$(this).hasClass('active')) {
+                $(this).parent().children('.choice').removeClass('active');
+                $(this).addClass('active');
+            }
+        } else {
+            $(this).parent().children('.cancel').removeClass('active');
+            if ($(this).hasClass('active')) {
+                $(this).removeClass('active');
+            } else {
+                $(this).addClass('active');
+            }
         }
     });
 

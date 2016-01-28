@@ -43,7 +43,7 @@
         <div class="contacts-block">
             <div class="address-block">
                 <div class="icon address-icon"></div>
-                <span class="our-address">г. Санкт-Петербург, м. Международная, ул. Белы Куна 30а, БЦ Софийская Площадь</span>
+                <span class="our-address">г. Санкт-Петербург, м. Международная,<br> ул. Белы Куна 30а, БЦ Софийская Площадь</span>
                 <div class="clearfix"></div>
             </div>
             <div class="email-block">
@@ -62,13 +62,22 @@
     <div class="content-block nav-block">
         <nav>
             <ul>
-                <li><a href="product-card.html">о компании</a></li>
-                <li><a href="#">каталог</a></li>
+                <li><a href="#">о компании</a></li>
+                <li class="super-menu">
+                    <a href="catalog.html">каталог</a>
+                    <ul class="sub-menu">
+                        <li><a href="#">Все для монтажа кабеля</a></li>
+                        <li><a href="#">Светотехническое оборудование</a></li>
+                        <li><a href="#">Светодиодное оборудование</a></li>
+                        <li><a href="#">Автоматы, розетки, выключатели, щитовое оборудование</a></li>
+                        <li><a href="#">Промышленное оборудование</a></li>
+                        <li><a href="#">Тепловое оборудование</a></li>
+                    </ul>
+                </li>
                 <li><a href="#">электромонтаж</a></li>
                 <li><a href="#">прайс в excel</a></li>
                 <li><a href="#">библиотека</a></li>
                 <li><a href="#">контакты</a></li>
-                <li></li><!-- fix for 'text-align: justify' -->
             </ul>
         </nav>
         <label class="search-block"><input class="unchosen" type="search" placeholder="&#8194;&#8194;&#8194;Поиск"/></label>
@@ -79,8 +88,8 @@
 <main>
     <div class="content-block">
         <ul class="breadcrumbs">
-            <li><a href="#">Главная</a><span class="delimiter">&#8194;&#8594;&#8194;</span></li>
-            <li><a href="#">Каталог</a><span class="delimiter">&#8194;&#8594;&#8194;</span></li>
+            <li><a href="index.html">Главная</a><span class="delimiter">&#8194;&#8594;&#8194;</span></li>
+            <li><a href="catalog.html">Каталог</a><span class="delimiter">&#8194;&#8594;&#8194;</span></li>
             <li><a href="#">Все для монтажа кабеля</a><span class="delimiter">&#8194;&#8594;&#8194;</span></li>
             <li><a href="#">Коробки распределительные, установочные</a><span class="delimiter">&#8194;&#8594;&#8194;</span></li>
         </ul>
