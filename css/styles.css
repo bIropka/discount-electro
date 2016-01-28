@@ -689,7 +689,7 @@ nav .sub-menu {
     position: relative;
     vertical-align: top;
 }
-.catalog-2 .product-card {
+.product-card {
     position: absolute;
     width: 95%;
     top: 0;
@@ -704,7 +704,7 @@ nav .sub-menu {
 }
 .catalog-2>li:nth-child(2) .product-card {top: 0;left:2.5%;}
 .catalog-2>li:nth-child(3) .product-card {top: 0;right:0;}
-.catalog-2 .product-name {
+.product-card .product-name {
     display: inline-block;
     height: 2em;
     margin: 1em 0 0 15px;
