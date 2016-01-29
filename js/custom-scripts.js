@@ -71,14 +71,50 @@ $(document).ready(function () {
     $('.product-card').hover(
         function(){
             $(this).css('z-index', '1');
-            $(this).find('.parameters').fadeIn();
+            $(this).find('.parameters').fadeIn(100);
             $(this).addClass('with-shadow');
         },
         function() {
             $(this).removeClass('with-shadow');
-            $(this).find('.parameters').fadeOut();
+            $(this).find('.parameters').fadeOut(100);
             $(this).css('z-index', '0');
         }
     );
+
+    $('.catalog-control .on-right').click(function() {
+        var productArray = $('.product-card-wrap');
+        var currentFirst = $('.first-visible').index();
+        $(productArray[currentFirst]).removeClass('first-visible');
+        currentFirst = currentFirst + 9;
+        $(productArray[currentFirst]).addClass('first-visible');
+        productArray.removeClass('visible');
+        if (currentFirst + 9 < $('.product-card-wrap').length) {
+            for (var i = currentFirst; i < currentFirst + 9; i++){
+                $('.product-card-wrap').eq(i).addClass('visible');
+            }
+        } else {
+            for (var j = currentFirst; j < $('.product-card-wrap').length; j++){
+                $('.product-card-wrap').eq(j).addClass('visible');
+            }
+            $('.catalog-control .on-right').css('visibility', 'hidden');
+        }
+        $('.catalog-control .on-left').css('visibility', 'visible');
+    });
+
+    $('.catalog-control .on-left').click(function() {
+        var productArray = $('.product-card-wrap');
+        var currentFirst = $('.first-visible').index();
+        $(productArray[currentFirst]).removeClass('first-visible');
+        currentFirst = currentFirst - 9;
+        $(productArray[currentFirst]).addClass('first-visible');
+        $('.product-card-wrap').removeClass('visible');
+        for (var i = currentFirst; i < currentFirst + 9; i++){
+            $('.product-card-wrap').eq(i).addClass('visible');
+        }
+        if (currentFirst == 0) {
+            $('.catalog-control .on-left').css('visibility', 'hidden');
+        }
+            $('.catalog-control .on-right').css('visibility', 'visible');
+    });
 
 });

@@ -674,24 +674,75 @@ nav .sub-menu {
 }
 .filters li:hover {border: 1px solid #f1af40;}
 .filters .active {border: 1px solid #f1af40;background: #f1af40;color: black}
-.catalog-2 {
-    display: table;
+.product-catalog-wrap {
     width: 75%;
     float: right;
     margin-bottom: 2%;
-    border-collapse: collapse;
+    position: relative;
 }
-.catalog-2-row {display: table-row;}
-.catalog-2-row>li {
-    display: table-cell;
+.catalog-control {
+    position: absolute;
+    top: -3.5em;
+    right: 0;
+}
+.catalog-control .on-left, .catalog-control .on-right {
+    display: inline-block;
+    border: 3px solid #f1af40;
+    -webkit-border-radius: 2em;
+    -moz-border-radius: 2em;
+    border-radius: 2em;
+    padding: 0.5em 1em;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+}
+.catalog-control .mark {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url('../images/sprite-3.png') 0 center;
+    background-size: cover;
+    vertical-align: middle;
+}
+.catalog-control .on-right .mark {background: url('../images/sprite-3.png') 100% center;background-size: cover;}
+.catalog-control .text-1 {
+    display: inline-block;
+    font-family: "Proxima Nova Bold", sans-serif;
+    text-transform: uppercase;
+    color: #f1af40;
+    line-height: 20px;
+    vertical-align: middle;
+}
+.catalog-control .on-left:hover, .catalog-control .on-right:hover {
+    -webkit-box-shadow: 0 0 8px #f1af40;
+    -moz-box-shadow: 0 0 8px #f1af40;
+    box-shadow: 0 0 8px #f1af40;
+}
+.catalog-control .on-left {
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    padding: 0.5em 0.6em;
+    visibility: hidden;
+}
+.product-catalog {
+    width: 100%;
+}
+.product-card-wrap {
+    display: none;
     width: 32%;
     height: 33em;
     position: relative;
     vertical-align: top;
+    margin-right: 2%;
 }
+.visible {display: inline-block;}
+.product-catalog .product-card-wrap:nth-child(3n) {margin-right: 0;}
 .product-card {
     position: absolute;
-    width: 95%;
+    width: 100%;
     top: 0;
     left: 0;
     outline: 1px solid #dadada;
@@ -702,41 +753,39 @@ nav .sub-menu {
     -moz-box-shadow: 5px 5px 8px lightgray, -5px 0 8px lightgray;
     box-shadow: 5px 5px 8px lightgray, -5px 0 8px lightgray;
 }
-.catalog-2>li:nth-child(2) .product-card {top: 0;left:2.5%;}
-.catalog-2>li:nth-child(3) .product-card {top: 0;right:0;}
 .product-card .product-name {
     display: inline-block;
-    height: 2em;
+    height: 2.2em;
     margin: 1em 0 0 15px;
     font-family: Arial, sans-serif;
     font-size: 1em;
     color: #448dca;
     text-decoration: none;
 }
-.catalog-2 .product-name:hover {text-decoration: underline;}
-.catalog-2 .articul-title {margin-left: 15px;}
-.catalog-2 li img {
+.product-catalog .product-name:hover {text-decoration: underline;}
+.product-catalog .articul-title {margin-left: 15px;}
+.product-catalog li img {
     width: 80%;
     margin: 1em 10%;
 }
-.catalog-2 .parameters {
+.product-catalog .parameters {
     list-style: none;
     margin-left: 15px;
     display: none;
 }
-.catalog-2 .parameters li {
+.product-catalog .parameters li {
     display: inline-block;
     width: 100%;
     margin-bottom: 0.6em;
 }
-.catalog-2 .param-name {color: #2c2c2c;font-weight: 600;}
-.catalog-2 .param-value {color: #2c2c2c;margin-left: 0.5em;}
-.catalog-2 .product-cost {
+.product-catalog .param-name {color: #2c2c2c;font-weight: 600;}
+.product-catalog .param-value {color: #2c2c2c;margin-left: 0.5em;}
+.product-catalog .product-cost {
     font-family: "Proxima Nova Bold", sans-serif;
     font-size: 1.7em;
     margin-left: 15px;
 }
-.catalog-2 button {
+.product-catalog button {
     width: 80%;
     color: white;
     background: -webkit-linear-gradient(to bottom, #0060b7, #004d8f);
@@ -753,8 +802,8 @@ nav .sub-menu {
     line-height: 2.5em;
     cursor: pointer;
 }
-.catalog-2 .to-buy {margin-bottom: 0;}
-.catalog-2 button:hover {
+.product-catalog .to-buy {margin-bottom: 0;}
+.product-catalog button:hover {
     background: -webkit-linear-gradient(to top, #0060b7, #004d8f);
     background: -o-linear-gradient(to top, #0060b7, #004d8f);
     background: -moz-linear-gradient(to top, #0060b7, #004d8f);
