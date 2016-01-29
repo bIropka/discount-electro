@@ -738,11 +738,12 @@ nav .sub-menu {
     vertical-align: top;
     margin-right: 2%;
 }
-.visible {display: inline-block;}
+.visible {display: inline-block!important;}
 .product-catalog .product-card-wrap:nth-child(3n) {margin-right: 0;}
 .product-card {
     position: absolute;
     width: 100%;
+    height: 33em;
     top: 0;
     left: 0;
     outline: 1px solid #dadada;
@@ -762,30 +763,30 @@ nav .sub-menu {
     color: #448dca;
     text-decoration: none;
 }
-.product-catalog .product-name:hover {text-decoration: underline;}
-.product-catalog .articul-title {margin-left: 15px;}
-.product-catalog li img {
+.product-card .product-name:hover {text-decoration: underline;}
+.product-card .articul-title {margin-left: 15px;}
+.product-card img {
     width: 80%;
     margin: 1em 10%;
 }
-.product-catalog .parameters {
+.product-card .parameters {
     list-style: none;
     margin-left: 15px;
     display: none;
 }
-.product-catalog .parameters li {
+.product-card .parameters li {
     display: inline-block;
     width: 100%;
     margin-bottom: 0.6em;
 }
-.product-catalog .param-name {color: #2c2c2c;font-weight: 600;}
-.product-catalog .param-value {color: #2c2c2c;margin-left: 0.5em;}
-.product-catalog .product-cost {
+.product-card .param-name {color: #2c2c2c;font-weight: 600;}
+.product-card .param-value {color: #2c2c2c;margin-left: 0.5em;}
+.product-card .product-cost {
     font-family: "Proxima Nova Bold", sans-serif;
     font-size: 1.7em;
     margin-left: 15px;
 }
-.product-catalog button {
+.product-card button {
     width: 80%;
     color: white;
     background: -webkit-linear-gradient(to bottom, #0060b7, #004d8f);
@@ -802,14 +803,50 @@ nav .sub-menu {
     line-height: 2.5em;
     cursor: pointer;
 }
-.product-catalog .to-buy {margin-bottom: 0;}
-.product-catalog button:hover {
+.product-card .to-buy {margin-bottom: 0;}
+.product-card button:hover {
     background: -webkit-linear-gradient(to top, #0060b7, #004d8f);
     background: -o-linear-gradient(to top, #0060b7, #004d8f);
     background: -moz-linear-gradient(to top, #0060b7, #004d8f);
     background: linear-gradient(to top, #0060b7, #004d8f);
 }
 /**************** end of catalog-2 ******************/
+/******************** index *********************/
+.content-top{width: 100%;}
+.content-top .left-column {width: 70%;}
+.content-top .right-column {width: 27%;}
+.content-top .slider {width: 100%;}
+.content-top .slider li {
+    display: none;
+    width: 100%;
+    height: 33em;
+}
+.content-top .slider img {width: 100%;height: 100%;}
+.content-top .product-card-wrap {
+    display: inline-block;
+    width: 100%;
+}
+.sections {
+    width: 100%;
+    margin: 2em 0;
+    list-style: none;
+}
+.sections li {
+    display: inline-block;
+    width: 32%;
+    margin-right: 2%;
+}
+.sections li img {width: 100%;}
+.sections li:nth-child(3){margin-right: 0;}
+.main-catalog {
+    width: 100%;
+    margin: 1em;
+}
+.main-catalog .left-column {width: 27%;}
+.main-catalog .right-column {width: 70%;}
+.main-catalog .right-column .product-catalog-wrap {width: 100%;}
+/**************** end of index ******************/
+/******************** footer *********************/
 .footer-top {margin: 0;}
 .footer-top .social-block {width:50%;float: left;}
 .footer-top .print-block {width:50%;float: right;text-align: right}
@@ -875,3 +912,4 @@ nav .sub-menu {
 .footer-contacts li {margin-bottom: 0.7em;}
 .footer-contacts .sub-title {margin:0;}
 .footer-contacts .rights {font-size: 0.7em;}
+/**************** end of footer ******************/
