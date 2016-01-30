@@ -117,4 +117,40 @@ $(document).ready(function () {
             $('.catalog-control .on-right').css('visibility', 'visible');
     });
 
+    $('.catalog-control .on-right-main').click(function() {
+        var productArray = $('.main-catalog .product-card-wrap');
+        var currentFirst = $('.first-visible').index();
+        $(productArray[currentFirst]).removeClass('first-visible');
+        currentFirst = currentFirst + 6;
+        $(productArray[currentFirst]).addClass('first-visible');
+        productArray.removeClass('visible');
+        if (currentFirst + 6 < $('.main-catalog .product-card-wrap').length) {
+            for (var i = currentFirst; i < currentFirst + 6; i++){
+                $('.main-catalog .product-card-wrap').eq(i).addClass('visible');
+            }
+        } else {
+            for (var j = currentFirst; j < $('.main-catalog .product-card-wrap').length; j++){
+                $('.main-catalog .product-card-wrap').eq(j).addClass('visible');
+            }
+            $('.catalog-control .on-right-main').css('visibility', 'hidden');
+        }
+        $('.catalog-control .on-left-main').css('visibility', 'visible');
+    });
+
+    $('.catalog-control .on-left-main').click(function() {
+        var productArray = $('.main-catalog .product-card-wrap');
+        var currentFirst = $('.first-visible').index();
+        $(productArray[currentFirst]).removeClass('first-visible');
+        currentFirst = currentFirst - 6;
+        $(productArray[currentFirst]).addClass('first-visible');
+        $('.main-catalog .product-card-wrap').removeClass('visible');
+        for (var i = currentFirst; i < currentFirst + 6; i++){
+            $('.main-catalog .product-card-wrap').eq(i).addClass('visible');
+        }
+        if (currentFirst == 0) {
+            $('.catalog-control .on-left-main').css('visibility', 'hidden');
+        }
+        $('.catalog-control .on-right-main').css('visibility', 'visible');
+    });
+
 });
