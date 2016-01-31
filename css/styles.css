@@ -11,6 +11,7 @@
 }
 body {
     width: 100%;
+    overflow-x: hidden;
 }
 button {cursor: pointer;}
 .clearfix {
@@ -57,15 +58,16 @@ button {cursor: pointer;}
     font-weight: 600;
 }
 .header-top .log-in {text-decoration: underline dotted;}
-header .content-block {text-align: center;}
+header .content-block {text-align: center;position: relative;}
 .logo-block {
     float: left;
     text-align: left;
     width: 30%;
+    vertical-align: top;
 }
 .logo-block .logo-icon {
-    width: 13%;
-    padding-top: 16%;
+    width: 2.5em;
+    padding-top: 3em;
     background: transparent url('../images/logo.png');
     background-size: cover;
     float: left;
@@ -74,7 +76,7 @@ header .content-block {text-align: center;}
     display: inline-block;
     width: 83%;
     vertical-align: top;
-    float: right;
+    float: left;
     text-transform: uppercase;
 }
 .logo-block .logo-1 .text-1 {
@@ -94,6 +96,7 @@ header .content-block {text-align: center;}
 .contacts-block {
     display: inline-block;
     width: 40%;
+    vertical-align: top;
 }
 .contacts-block .icon {
     width: 1.8em;
@@ -117,7 +120,8 @@ header .content-block {text-align: center;}
 .contacts-block .our-address, .contacts-block .our-email {
     display: inline-block;
     width: 90%;
-    float: right;
+    float: left;
+    margin-left: 10px;
 }
 .contacts-block .our-email a {
     color: #448dca;
@@ -130,22 +134,23 @@ header .content-block {text-align: center;}
     float: right;
     text-align: left;
     width: 22%;
+    vertical-align: top;
 }
 .phone-block .phone-icon {
+    display: inline-block;
     width: 2.3em;
     padding-top: 2.3em;
     background: #f1af40 url('../images/sprite.png') no-repeat 56.6% center;
     background-size: cover;
-    vertical-align: middle;
+    vertical-align: top;
     -webkit-border-radius: 100%;
     -moz-border-radius: 100%;
     border-radius: 100%;
-    float: left;
     margin-left: 5%;
+    margin-right: 3%;
 }
-.phone-block .our-phone-number {
-    float: right;
-    width: 70%;
+.phone-block .phone-content {
+    display: inline-block;
 }
 .our-phone-number .text-1, .our-phone-number .text-2 {
     display: inline-block;
@@ -157,8 +162,6 @@ header .content-block {text-align: center;}
 .phone-block>.text-1 {
     font-size: 0.9em;
     color: #999999;
-    width: 70%;
-    float: right;
 }
 .nav-block {
     background: -webkit-linear-gradient(to bottom, #0060b7, #004d8f);
@@ -173,6 +176,17 @@ header .content-block {text-align: center;}
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    position: relative;
+}
+.nav-control {
+    display: none;
+    position: absolute;
+    top: 13px;
+    left: 20px;
+    width: 3.7em;
+    height: 2em;
+    background: url('../images/menu.png');
+    background-size: cover;
 }
 nav>ul {
     display: inline-block;
@@ -511,7 +525,7 @@ nav .sub-menu {
     margin-right: 0.3em;
 }
 .payment-delivery-block {
-    border: 3px solid #f1af40;
+    outline: 3px solid #f1af40;
     width: 100%;
 }
 .payment-delivery-block .sub-title {
@@ -760,8 +774,8 @@ nav .sub-menu {
 }
 .product-card .product-name {
     display: inline-block;
-    height: 2.2em;
-    margin: 1em 0 0 15px;
+    height: 3em;
+    margin: 1em 5px 0 15px;
     font-family: Arial, sans-serif;
     font-size: 1em;
     color: #448dca;
@@ -902,8 +916,8 @@ nav .sub-menu {
     padding: 5px 20px;
 }
 .main-catalog {
-    width: 100%;
-    margin: 1em;
+    /*width: 100%;*/
+    /*margin: 1em;*/
 }
 .main-catalog .left-column {width: 27%;}
 .categories li {display: table;width: 100%;margin-bottom: 3%;}
@@ -952,7 +966,7 @@ nav .sub-menu {
 .banner .text-2 {font-family: "Proxima Nova Regular", sans-serif}
 .banner-2{background: url('../images/banner-2.jpg');background-size: cover;}
 .main-catalog .right-column {width: 70%;}
-.main-catalog .right-column .product-catalog-wrap {width: 100%;}
+.main-catalog .right-column .product-catalog-wrap {width: 100%;float:none;}
 .main-catalog .catalog-title {
     width: 100%;
     border-top: 2px solid #e4e4e4;
@@ -1127,3 +1141,74 @@ nav .sub-menu {
 /**************** end of footer ******************/
 
 /********** media queries **********/
+@media (max-width: 980px) {
+    .header-top .basket-block, .header-top .authorization-block {
+        width: 100%;
+        float: none;
+    }
+    .header-top .basket-block {margin-bottom: 2%;}
+    .logo-block {width: 55%; margin: 0 0 70px 2%;}
+    .phone-block {width: 40%; margin: 0 2% 70px 0;text-align: right;}
+    .contacts-block {width: 90%;position: absolute; bottom: 0;left: 0; right:0;margin-left: 2%;}
+    .nav-block {
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
+    }
+    .nav-control {display: block;}
+    nav>ul {
+        margin-top: 3em;
+        float: none;
+        width: 100%;
+    }
+    nav>ul>li {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    nav>ul>li>a{
+        display: block;
+        width: 100%;
+        border-bottom: 1px solid #004d8f;
+    }
+    nav>ul>li:hover {
+        border-left: 1px solid transparent;
+        border-right: 1px solid transparent;
+    }
+    nav>ul>li>a:hover, .nav-block .sub-menu a:hover {
+        color: #ffffff;
+    }
+    .nav-block .super-menu{display:block;position: static;}
+    .nav-block .sub-menu {
+        display: block;
+        position: static;
+        background: none;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
+        padding: 0;
+    }
+    .nav-block .sub-menu li {display: block;height: 1em;}
+    .nav-block .sub-menu li a {
+        display: block;
+        text-transform: uppercase;
+        font-weight: 600;
+        margin-top: 1.5em;
+        white-space: normal;
+        width: 100%;
+        border-bottom: 1px solid #004d8f;
+    }
+    .nav-block .search-block {
+        float: none;
+        width: 40%;
+        position: absolute;
+        top: 13px;
+        right: 20px;
+        margin: 0;
+    }
+    .nav-block .search-block input {width: 100%;}
+}
+@media (max-width: 560px) {
+    .logo-block, .phone-block, .contacts-block {width: 96%; margin: 2% 2%;float: none;position: static;text-align: left;}
+    .phone-block .phone-icon {margin-left:0;}
+}
