@@ -12,6 +12,7 @@
 body {
     width: 100%;
 }
+button {cursor: pointer;}
 .clearfix {
     clear: both;
 }
@@ -771,6 +772,7 @@ nav .sub-menu {
 .product-card img {
     width: 80%;
     margin: 1em 10%;
+    outline: 1px solid #dadada;
 }
 .product-card .parameters {
     list-style: none;
@@ -818,21 +820,58 @@ nav .sub-menu {
 .content-top{width: 100%;}
 .content-top .left-column {width: 70%;}
 .content-top .right-column {width: 27%;}
-.content-top .slider {width: 100%;}
-.content-top .slider li {
+.content-top .slider {width: 100%;position: relative;}
+.content-top .slider ul {list-style: none;}
+.content-top .slide {
     display: none;
     width: 100%;
     height: 33em;
+    background: url('../images/slide.jpg');
+    background-size: cover;
 }
-.content-top .slider img {width: 100%;height: 100%;}
+.content-top .slide:first-child {display: block;}
+.content-top .slide:nth-child(2){background: url('../images/house.jpg');background-size: cover;}
+.content-top .slide:nth-child(3){background: url('../images/office.jpg');background-size: cover;}
+.content-top .slide:nth-child(4){background: url('../images/production.jpg');background-size: cover;}
+.slider-controls {
+    position: absolute;
+    bottom: 5em;
+    right: 3em;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.slider-controls div {
+    display: inline-block;
+    font-size: 5em;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    background: #f1af40;
+    color: white;
+    font-family: "Proxima Nova Bold", sans-serif;
+    padding: 20px 15px 30px 13px;
+    line-height: 0;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+.slider-controls .right {padding: 20px 12px 30px 15px;}
+.slider-controls div:hover {
+    border: 2px solid #ffba43;
+    -webkit-box-shadow: 0 0 5px #ffba43;
+    -moz-box-shadow: 0 0 5px #ffba43;
+    box-shadow: 0 0 5px #ffba43;
+    text-shadow: 0 0 5px #ffffff;
+}
 .content-top .product-card-wrap {
     display: inline-block;
     width: 100%;
 }
 .new-product-icon {
     position: absolute;
-    top: 2em;
-    right: 0;
+    top: 3em;
+    right: -0.5em;
     width: 5em;
     height: 5em;
     background: url('../images/sprite-2.png') 100% 0;
@@ -1086,3 +1125,5 @@ nav .sub-menu {
 .footer-contacts .sub-title {margin:0;}
 .footer-contacts .rights {font-size: 0.7em;}
 /**************** end of footer ******************/
+
+/********** media queries **********/

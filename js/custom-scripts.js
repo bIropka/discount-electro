@@ -1,5 +1,6 @@
 $(document).ready(function () {
 
+    /************ product`s photos *************/
     $('.photo-list li').click(function(){
         if(!$(this).hasClass('active')) {
             $('.photo-main .active').css('display', 'none');
@@ -26,6 +27,7 @@ $(document).ready(function () {
             $(this).addClass('active');
         }
     });
+    /********* end of the product`s photos *********/
 
     $('.nav-block .search-block input').focus(function(){
         $(this).removeClass('unchosen');
@@ -81,6 +83,7 @@ $(document).ready(function () {
         }
     );
 
+    /************** catalog`s script **************/
     $('.catalog-control .on-right').click(function() {
         var productArray = $('.product-card-wrap');
         var currentFirst = $('.first-visible').index();
@@ -116,7 +119,9 @@ $(document).ready(function () {
         }
             $('.catalog-control .on-right').css('visibility', 'visible');
     });
+    /*********** end of the catalog`s script **********/
 
+    /************** catalog`s script for the main page **************/
     $('.catalog-control .on-right-main').click(function() {
         var productArray = $('.main-catalog .product-card-wrap');
         var currentFirst = $('.first-visible').index();
@@ -152,5 +157,51 @@ $(document).ready(function () {
         }
         $('.catalog-control .on-right-main').css('visibility', 'visible');
     });
+    /*********** end of the catalog`s script for the main page **********/
+
+    /*************** slider ******************/
+    var forTimer = function(){
+        $('.slider-controls').css('visibility','hidden');
+        var slides = $('.slide');
+        var currentSlide = $('.current-slide').index();
+        $('.current-slide').css('display', 'none');
+        $(slides[currentSlide]).removeClass('current-slide');
+        if(currentSlide != slides.length - 1) {
+            currentSlide++;
+        } else {
+            currentSlide = 0;
+        }
+        $(slides[currentSlide]).addClass('current-slide');
+        $('.current-slide').fadeIn();
+        $('.slider-controls').css('visibility','visible');
+    };
+    var myTimer = setInterval(forTimer, 5000);
+
+    $('.slider-controls div').click(function() {
+        $(this).css('visibility','hidden');
+        clearInterval(myTimer);
+        var slides = $('.slide');
+        var currentSlide = $('.current-slide').index();
+        $('.current-slide').css('display', 'none');
+        $(slides[currentSlide]).removeClass('current-slide');
+        if($(this).hasClass('right')){
+            if(currentSlide != slides.length - 1) {
+                currentSlide++;
+            } else {
+                currentSlide = 0;
+            }
+        } else {
+            if(currentSlide != 0) {
+                currentSlide--;
+            } else {
+                currentSlide = slides.length - 1;
+            }
+        }
+        $(slides[currentSlide]).addClass('current-slide');
+        $('.current-slide').fadeIn();
+        $(this).css('visibility','visible');
+        myTimer = setInterval(forTimer, 5000);
+    });
+    /************ end of slider **************/
 
 });
