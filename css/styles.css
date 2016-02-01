@@ -8,6 +8,9 @@
     font-size: 14px;
     font-family: Arial, sans-serif;
     color: #2c2c2c;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 html{overflow-x: hidden;}
 body {
@@ -299,15 +302,14 @@ nav .sub-menu {
 }
 .product-general {
     position: relative;
-    width: 95%;
-    margin: 0 2.5%;
+    width: 100%;
 }
 .photo-block, .to-buy-column {
     width: 50%;
     margin-top: 1%;
     float: left;
 }
-.photo-main {list-style: none;outline: 1px solid #aaaaaa;}
+.photo-main {list-style: none;border: 1px solid #aaaaaa;}
 .photo-main li{
     width: 100%;
     display: none;
@@ -330,14 +332,14 @@ nav .sub-menu {
     height: 7em;
     margin: 3% 2% 0 0;
     cursor: pointer;
-    outline: 1px solid #aaaaaa;
+    border: 1px solid #aaaaaa;
     overflow: hidden;
 }
 .photo-list li:last-child {
     margin-right: 0;
 }
 .photo-list li:hover {
-    outline: 1px solid #f1af40;
+    border: 1px solid #f1af40;
 }
 .photo-list li img {
     width: 90%;
@@ -815,7 +817,7 @@ nav .sub-menu {
 .product-card button {
     width: 80%;
     color: white;
-    background: -webkit-linear-gradient(to bottom, #0060b7, #004d8f);
+    background: #bbbbbb;
     background: -o-linear-gradient(to bottom, #0060b7, #004d8f);
     background: -moz-linear-gradient(to bottom, #0060b7, #004d8f);
     background: linear-gradient(to bottom, #0060b7, #004d8f);
@@ -829,7 +831,8 @@ nav .sub-menu {
     line-height: 2.5em;
     cursor: pointer;
 }
-.product-card .to-buy {margin-bottom: 0;}
+.product-card .to-buy {background: #c1c1c1;margin-bottom: 0;color: black;}
+.product-card .to-buy:hover {background: #bbbbbb;}
 .product-card button:hover {
     background: -webkit-linear-gradient(to top, #0060b7, #004d8f);
     background: -o-linear-gradient(to top, #0060b7, #004d8f);
@@ -980,7 +983,7 @@ nav .sub-menu {
     width: 100%;
     border-top: 2px solid #e4e4e4;
 }
-.main-catalog .catalog-title .icon {
+.catalog-title .icon {
     width: 35px;
     height: 30px;
     background: url('../images/sprite-2.png') 0 center;
@@ -988,7 +991,7 @@ nav .sub-menu {
     vertical-align: middle;
     margin: 20px 15px 20px 0;
 }
-.main-catalog .catalog-title .text-1, .main-catalog .catalog-title .text-2 {
+.catalog-title .text-1, .catalog-title .text-2 {
     display: inline-block;
     font-family: "Proxima Nova Bold", sans-serif;
     font-size: 1.5em;
@@ -996,7 +999,7 @@ nav .sub-menu {
     line-height: 30px;
     vertical-align: middle;
 }
-.main-catalog .catalog-title .text-2 {font-family: "Proxima Nova Regular", sans-serif}
+.catalog-title .text-2 {font-family: "Proxima Nova Regular", sans-serif}
 .main-catalog .catalog-control {top:15px;}
 .seo-block {width: 100%;margin-bottom: 8%;}
 .seo-block p {
@@ -1271,6 +1274,10 @@ nav .sub-menu {
     .related-products-block ul li {width: 45%;margin-right:10%;margin-bottom: 3%;}
     .related-products-block ul li:nth-child(2n) {margin-right:0;}
     .product-name {width:95%; margin-left:2.5%;}
+    .main {margin-top: 0;}
+    .main .catalog-control {top: 10px;}
+    .main .catalog-control-bottom {top: 99.5%;}
+    .footer-top{margin-top:10px;}
 }
 @media (max-width: 768px) {
     .product-card-wrap {width: 45%;margin-right: 10%;}
@@ -1303,4 +1310,7 @@ nav .sub-menu {
     .product-card-wrap:nth-child(3n){margin-left: 15%;margin-right: 0;}
     .product-card-wrap:nth-child(2n){margin-left: 15%;margin-right: 0;}
     .to-buy-block button {font-size:0.8em;}
+    .main .catalog-title {margin-bottom: 40px;text-align: center;}
+    .main .catalog-control {top: 60px;}
+    .main .catalog-control-bottom {top: 99.5%;}
 }
