@@ -827,11 +827,11 @@ nav .sub-menu {
     border: none;
     text-transform: uppercase;
     font-family: "Proxima Nova Bold", sans-serif;
-    margin: 1em 0 1em 15px;
+    margin: 1em 0 0 15px;
     line-height: 2.5em;
     cursor: pointer;
 }
-.product-card .to-buy {background: #c1c1c1;margin-bottom: 0;color: black;}
+.product-card .to-buy {background: #c1c1c1;color: black;}
 .product-card .to-buy:hover {background: #bbbbbb;}
 .product-card button:hover {
     background: -webkit-linear-gradient(to top, #0060b7, #004d8f);
@@ -839,11 +839,19 @@ nav .sub-menu {
     background: -moz-linear-gradient(to top, #0060b7, #004d8f);
     background: linear-gradient(to top, #0060b7, #004d8f);
 }
+.product-card .add-comment {
+    font-size: 0.8em;
+    margin-bottom:1em;
+    line-height: 3em;
+    background: #f1af40;
+    color: black;
+}
+.product-card .add-comment:hover {background: #e0a03e;}
 /**************** end of catalog-2 ******************/
 /******************** index *********************/
 .content-top{width: 100%;}
-.content-top .left-column {width: 70%;}
-.content-top .right-column {width: 27%;}
+.content-top .left-column {width: 75%;}
+.content-top .right-column {width: 22%;}
 .content-top .slider {width: 100%;position: relative;margin-top: 10px;}
 .content-top .slider ul {list-style: none;}
 .content-top .slide {
