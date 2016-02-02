@@ -8,9 +8,6 @@
     font-size: 14px;
     font-family: Arial, sans-serif;
     color: #2c2c2c;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
 }
 html{overflow-x: hidden;}
 body {
@@ -334,6 +331,9 @@ nav .sub-menu {
     cursor: pointer;
     border: 1px solid #aaaaaa;
     overflow: hidden;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 .photo-list li:last-child {
     margin-right: 0;
@@ -530,6 +530,27 @@ nav .sub-menu {
     display: inline-block;
     color: #8c8c8c;
     margin-right: 0.3em;
+}
+.add-review {
+    width: 40%;
+    color: white;
+    background: -o-linear-gradient(to bottom, #0060b7, #004d8f);
+    background: -moz-linear-gradient(to bottom, #0060b7, #004d8f);
+    background: linear-gradient(to bottom, #0060b7, #004d8f);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border: none;
+    text-transform: uppercase;
+    font-family: "Proxima Nova Bold", sans-serif;
+    margin: 1em 0 1em 60px;
+    line-height: 2.5em;
+    cursor: pointer;
+}
+.add-review:hover {
+    background: -o-linear-gradient(to top, #0060b7, #004d8f);
+    background: -moz-linear-gradient(to top, #0060b7, #004d8f);
+    background: linear-gradient(to top, #0060b7, #004d8f);
 }
 .payment-delivery-block {
     border: 3px solid #f1af40;
@@ -1321,4 +1342,5 @@ nav .sub-menu {
     .main .catalog-title {margin-bottom: 40px;text-align: center;}
     .main .catalog-control {top: 60px;}
     .main .catalog-control-bottom {top: 99.5%;}
+    .add-review {width: 60%;}
 }
