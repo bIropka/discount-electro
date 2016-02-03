@@ -32,8 +32,8 @@ button {cursor: pointer;}
     width: 100%;
     background-color: #f4b031;
     padding: 10px 0;
-    margin-bottom: 1.5%;
 }
+.footer-top {margin-bottom: 1.5%;}
 .header-top .basket-block {float: left;}
 .header-top .basket-block .text-1 {text-decoration: underline;font-weight: 600;}
 .header-top .basket-block .to-pay, .delimiter {color: rgba(0, 0, 0, 0.2);}
@@ -62,42 +62,17 @@ button {cursor: pointer;}
 header .content-block {text-align: center;position: relative;}
 .logo-block {
     float: left;
-    text-align: left;
     width: 30%;
-    vertical-align: top;
+    vertical-align: middle;
+    margin: -1% 0 -2%;
+    outline: none;
 }
-.logo-block .logo-icon {
-    width: 2.5em;
-    padding-top: 3em;
-    background: transparent url('../images/logo.png');
-    background-size: cover;
-    float: left;
-}
-.logo-block .logo-1, .logo-block .logo-2 {
-    display: inline-block;
-    width: 83%;
-    vertical-align: top;
-    float: left;
-    text-transform: uppercase;
-}
-.logo-block .logo-1 .text-1 {
-    font-family: "Proxima Nova Bold", sans-serif;
-    font-size: 1.8em;
-    color: #0258a0;
-}
-.logo-block .logo-1 .text-2 {
-    font-family: "Proxima Nova Light", sans-serif;
-    font-size: 1.8em;
-}
-.logo-block .logo-2 {
-    font-family: "Proxima Nova Bold", sans-serif;
-    font-size: 0.8em;
-    color: #999999;
-}
+.logo-block img {width: 100%;}
 .contacts-block {
     display: inline-block;
     width: 40%;
-    vertical-align: top;
+    margin-top: 3%;
+    margin-left: 5%;
 }
 .contacts-block .icon {
     width: 1.8em;
@@ -135,7 +110,7 @@ header .content-block {text-align: center;position: relative;}
     float: right;
     text-align: left;
     width: 22%;
-    vertical-align: top;
+    margin-top: 3%;
 }
 .phone-block .phone-icon {
     display: inline-block;
@@ -174,7 +149,7 @@ header .content-block {text-align: center;position: relative;}
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
-    margin: 1.5% auto 1%;
+    margin: 0.5% auto 1%;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
