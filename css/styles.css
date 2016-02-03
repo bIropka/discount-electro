@@ -780,7 +780,6 @@ nav .sub-menu {
 .product-card-wrap {
     display: none;
     width: 32%;
-    height: 33em;
     position: relative;
     vertical-align: top;
     margin-right: 2%;
@@ -789,15 +788,11 @@ nav .sub-menu {
 .visible {display: inline-block!important;}
 .product-catalog .product-card-wrap:nth-child(3n) {margin-right: 0;}
 .product-card {
-    position: absolute;
     width: 100%;
-    min-height: 33em;
-    top: 0;
-    left: 0;
     outline: 1px solid #dadada;
     background: white;
 }
-.with-shadow {
+.product-card:hover {
     -webkit-box-shadow: 5px 5px 8px lightgray, -5px 0 8px lightgray;
     -moz-box-shadow: 5px 5px 8px lightgray, -5px 0 8px lightgray;
     box-shadow: 5px 5px 8px lightgray, -5px 0 8px lightgray;
@@ -821,7 +816,6 @@ nav .sub-menu {
 .product-card .parameters {
     list-style: none;
     margin-left: 15px;
-    display: none;
 }
 .product-card .parameters li {
     display: inline-block;
@@ -878,7 +872,7 @@ nav .sub-menu {
 .content-top .slide {
     display: none;
     width: 100%;
-    height: 33em;
+    height: 600px;
     background: url('../images/slide.jpg');
     background-size: cover;
 }
@@ -955,10 +949,6 @@ nav .sub-menu {
     font-size: 1.3em;
     width: auto;
     padding: 5px 20px;
-}
-.main-catalog {
-    /*width: 100%;*/
-    /*margin: 1em;*/
 }
 .main-catalog .left-column {width: 27%;}
 .categories li {display: table;width: 100%;margin-bottom: 3%;}
@@ -1259,13 +1249,16 @@ nav .sub-menu {
     .content-top .left-column {float: none; width:95%;margin: 0 2.5% 2.5%;}
     .content-top .right-column {float: none;width:95%;margin: 0 2.5%;text-align: center;}
     .content-top .slide {width: 100%; padding-top: 60%;height: auto;}
-    .product-card-wrap {height: auto;text-align: left;}
+    .product-card-wrap {text-align: left;}
     .main-catalog .product-card-wrap {width: 45%;margin-right: 5%;}
     .main-catalog .product-card-wrap:nth-child(3n) {margin-right: 5%;}
     .main-catalog .product-card-wrap:nth-child(2n) {margin-right: 0;}
-    .content-top .product-card-wrap {display: none;width: 250px;text-align: left;}
-    .product-card-wrap .product-card {position: static;}
-    .product-card .parameters {display: block!important;}
+    .content-top .product-card-wrap {display: none;}
+    .product-card:hover {
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+    }
     .sections, .about-us {display: none;}
     .main-catalog {width:95%;margin: 0 2.5%;}
     .main-catalog .left-column, .main-catalog .right-column {width:100%;}

@@ -82,23 +82,6 @@ $(document).ready(function () {
         }
     });
 
-    $('.product-card').hover(
-        function(){
-            if($(window).width() > 965){
-                $(this).css('z-index', '1');
-                $(this).find('.parameters').fadeIn(100);
-                $(this).addClass('with-shadow');
-            }
-        },
-        function() {
-            if($(window).width() > 965){
-                $(this).removeClass('with-shadow');
-                $(this).find('.parameters').fadeOut(100);
-                $(this).css('z-index', '0');
-            }
-        }
-    );
-
     /************** catalog`s script **************/
     $('.catalog-control .on-right').click(function() {
         var productArray = $('.product-card-wrap');
